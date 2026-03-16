@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Educational Content Generator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="hero">
+
+<h1>Empower Your Mind—</h1>
+<h2>Smarter Content, Brighter Futures</h2>
+
+<p>
+Generate personalized notes, quizzes, explanations and summaries.
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>✨ Generate Educational Content</h3>
+
+<form action="/generate" method="POST">
+
+<input type="text" name="topic" placeholder="Enter topic..." required>
+
+<div class="row">
+
+<select name="subject">
+<option>Science</option>
+<option>Math</option>
+<option>History</option>
+<option>Computer Science</option>
+</select>
+
+<select name="difficulty">
+<option>Beginner</option>
+<option selected>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<select name="type">
+<option>Study Notes</option>
+<option>Quiz</option>
+<option>Summary</option>
+</select>
+
+</div>
+
+<button type="submit" id="generateBtn">
+✨ Generate Content
+</button>
+
+</form>
+
+<div id="loader" class="loader hidden"></div>
+
+</div>
+
+</body>
+</html>

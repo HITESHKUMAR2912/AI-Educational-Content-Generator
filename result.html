@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Generated Content</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+<h1>Generated Educational Content</h1>
+
+<div class="result-box">
+    {{ result | safe }}
+    </div>
+
+<p id="ai-output">{{ result }}</p>
+
+</div>
+
+<a href="/" class="back-btn">Generate Another</a>
+
+</div>
+
+<script>
+
+typeWriter("{{ result }}", document.getElementById("ai-output"))
+
+</script>
+
+</body>
+</html>
